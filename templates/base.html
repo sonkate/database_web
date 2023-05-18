@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The concert</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2995/2995101.png" type="image/x-icon" />
+    {% load static %}
+    <link rel="stylesheet" href="{{ 'static/css/style.css' }}">
+    <link rel="stylesheet" href="{{ 'static/font/themify-icons/themify-icons.css' }}">
+    
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <ul id="nav">
+                <li><a href="{%url 'home'%}">Home</a></li>
+                <li><a href="{%url 'home'%}#band">Judge</a></li>
+                <li><a href="{%url 'home'%}#tour">Tour</a></li>
+                <li><a href="{%url 'home'%}#contact">Contact</a></li>
+                <li><a href="admin">Admin</a></li>
+                <li><a href="trainee">Trainee</a></li>
+                {%if user.is_authenticated%}
+                <li><a href="{%url 'logout'%}" >Logout</a></li>
+                {%else%}
+                <li><a href="login_user" >Login</a></li>
+                {%endif%}
+                <li>
+                    <a href="">
+                        More
+                        <i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
+                    </ul>
+                </li>
+            </ul>   
+            <!-- end nav -->
+            <div class="search-btn">
+                <i class="search-icon ti-search"></i>
+            </div>
+        </div>
+        {%block content%}
+        {%endblock%}
+    </div>
+</body>
+</html>

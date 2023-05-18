@@ -1,0 +1,181 @@
+{% extends 'base.html'%}
+{%block content%}
+<div id="slider">
+    <div class="text-content">
+        <h2 class="text-heading">The Concert</h2>
+        <div class="text-description">Welcome to our website</div>
+    </div>
+    <div>
+        <img width="100%" src="{{ 'static/img/bp_banner.jpg' }}" alt="My Banner">
+    </div>
+</div>
+
+<div id="content">
+    <!-- about section-->
+    <div id="band" class="content-section">
+        <h2 class="section-heading">The Judge</h2>
+        <p class="section-subheading">We love music</p>
+        <p class="about-text" style="text-align:center ;">
+            "One thing about music, when it hits you, you feel no pain"
+        </p>
+        <div class="row" style="margin-top: 48px;">
+            <div class="col-thirds center">
+                <p class="member-name">Ed Sheeran</p>
+                <img src="{{ 'static/img/ed_sheeran.jpg' }}" alt="Name" class="member-image">
+            </div>
+            <div class="col-thirds center">
+                <p class="member-name">Ariana Grande</p>
+                <img style="height: 200px ;" src="{{ 'static/img/ariana_grande.png' }}" alt="Name" class="member-image">
+            </div>
+            <div class="col-thirds center">
+                <p class="member-name">Charlie Puth</p>
+                <img style="height: 200px ;" src="{{ 'static/img/charlie_puth.png' }}" alt="Name" class="member-image">
+            </div>
+        </div>
+    </div>
+    <!-- Tour section -->
+    <div id="tour" class="tour-section">
+        <div class="content-section">
+            <h2 class="section-heading text-white">Tour dates</h2>
+            <p class="section-subheading text-white">Remember to book your tickets!</p>
+
+            <ul class="tickets">
+                <li>September <span class="sold-out">Sold out</span></li>
+                <li>October <span class="sold-out">Sold out</span></li>
+                <li>November <span class="ticket-quantity">3</span></li>
+            </ul>
+
+            <div class="row place-list">
+                <div class="col col-thirds">
+                    <img src="{{'static/img/place1.jpg'}}" alt="New York" class="place-img">
+                    <div class="place-body">
+                        <h4 class="place-title">New York</h4>
+                        <p class="place-time">Fri 27 Nov 2016</p>
+                        <p class="desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <button class="buyBtn js-buy-ticket">Buy Tickets</button>
+                    </div>
+                </div>
+                <div class="col col-thirds">
+                    <img src="{{'static/img/place2.jpg'}}" alt="New York" class="place-img">
+                    <div class="place-body">
+                        <h4 class="place-title">Paris</h4>
+                        <p class="place-time">Fri 27 Nov 2016</p>
+                        <p class="desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <button class="buyBtn js-buy-ticket">Buy Tickets</button>
+                    </div>
+                </div>
+                <div class="col col-thirds">
+                    <img src="{{'static/img/place3.jpg'}}" alt="New York" class="place-img">
+                    <div class="place-body">
+                        <h3 class="place-title">San Francisco</h3>
+                        <p class="place-time">Fri 27 Nov 2016</p>
+                        <p class="desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <button class="buyBtn js-buy-ticket">Buy Tickets</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="content-section">
+        <h2 class="section-heading">Contact</h2>
+        <p class="section-subheading">Fan? Drop a note!</p>
+        <div class="row contact-content">
+            <div class="col col-half contact-infor">
+                <p><i class="ti-location-pin"></i>Chicago US</p>
+                <p><i class="ti-mobile"></i>Phone: 037928</p>
+                <p><i class="ti-email"></i>Email: email@gmail.com</p>
+            </div>
+            <div class="col col-half contact-form">
+                <form action="">
+                    <div class="row">
+                        <div class="col col-half">
+                            <input type="text" class="form-control" placeholder="Name" required>
+                        </div>
+                        <div class="col col-half">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="row mt-8">
+                        <div class="col col-full">
+                            <input type="text" class="form-control" placeholder="Message">
+                        </div>
+                    </div>
+                    <input style="float: right;" type="submit" value="SEND" class="mt-16 buyBtn">
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End contact Section -->
+    <div class="map-section">
+        <img src="{{'static/img/map.jpg'}}" alt="map">
+    </div>
+</div>
+
+<div id="footer">
+    <div class="socials-list">
+        <a href=""><i class="ti-facebook"></i></a>
+        <a href=""><i class="ti-instagram"></i></a>
+        <a href=""><i class="ti-pinterest"></i></a>
+        <a href=""><i class="ti-twitter"></i></a>
+        <a href=""><i class="ti-linkedin"></i></a>
+        <a href=""><i class="ti-youtube"></i></a>
+    </div>
+    <p class="copyright">Power by <a href="https://github.com/sonkate">sonkate</a></p>
+</div>
+</div>
+<div class="modal js-modal">
+    <div class="modal-container js-modal-container">
+        <div class="modal-close js-modal-close">
+            <i class="ti-close"></i>
+        </div>
+        <header class="modal-header">
+            <i style="margin-right: 16px;" class="ti-bag"></i>
+            Tickets
+        </header>
+        <div class="modal-body">
+            <label for="ticket-quantity" class="modal-label">
+                <i class="ti-shopping-cart"></i>
+                Tickers, $15 per person.
+            </label>
+            <input id="ticket-quantity" type="text" class="modal-input" placeholder="How many">
+
+            <label for="ticket-email" class="modal-label">
+                <i class="ti-user"></i>
+                Send to
+            </label>
+            <input id="ticket-email" type="email" class="modal-input" placeholder="Enter email">
+
+            <button id="buy-ticket">
+                Pay <i class="ti-check"></i>
+            </button>
+        </div>
+        <footer class="modal-footer">
+            <p class="modal-help">Need <a href="">help?</a></p>
+        </footer>
+    </div>
+</div>
+
+<script>
+    const buyBtns = document.querySelectorAll('.js-buy-ticket');
+    const modal = document.querySelector('.js-modal');
+    const modalClose = document.querySelector('.js-modal-close');
+    const modalContainer = document.querySelector('.js-modal-container');
+    function showBuyTickets() {
+        modal.classList.add('open');
+    }
+    function hideModal() {
+        modal.classList.remove('open');
+    }
+    for (const buyBtn of buyBtns) {
+        buyBtn.addEventListener('click', showBuyTickets);
+    }
+
+    modalClose.addEventListener('click', hideModal);
+    modal.addEventListener('click', hideModal);
+    modalContainer.addEventListener('click', function (event) {
+        event.stopPropagation();
+    });
+</script>
+{%endblock%}
