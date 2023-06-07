@@ -8,5 +8,5 @@ You can start this web with linux:
 4. Run web: python manage.py runserver
 
 # account for login:
-id: son
+id: son   
 password: 123123
